@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="adminlogin.css">  
+<script type="text/javascript">
+function valid(){
+	var id= document.frm.id.value;
+	var pass= document.frm.pass.value;
+	if(id==""){
+		alert("Enter login id");
+		return false;
+		}
+	else if(pass==""){
+		alert("Enter password");
+		return false;
+		}
+}
+</script>  
+</head>    
+<body>    
+    <h2>Admin Login</h2><br>    
+    <div class="login">    
+   <form name="frm" class="login" id="login" action="AdminLogin" onsubmit="return valid()">
+        <label><b>Admin Login Id     
+        </b>    
+        </label>    
+        <input type="text" name="id" id="id" placeholder="Login Id">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="password" name="pass" id="pass" placeholder="Password">    
+        <br><br>    
+        <input type="submit" id="sub" value="Login">
+        <br><br> "
+    </form>     
+</div>  
+<br>
+<center><a href="index.html">GO BACK</a></center>  
+</body>  
+</html>     

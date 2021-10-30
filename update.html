@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style type="text/css">
+body{
+background-image:
+url('multibackground.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+ }
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+td {
+  text-align: center;
+}
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow:hidden;
+background-color: #333;
+}
+
+li{
+float: left;
+}
+
+li a{
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+	background-color: red;
+}
+input[type=submit]{
+ background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+input[type=submit]:hover {
+  background-color: blue;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+</style>
+<script type="text/javascript">
+function valid(){
+	var id=document.frm.sid.value;
+	if(id==""){
+		alert("Please Enter Table Number");
+		return false;
+		}
+}
+</script>
+
+<body>
+<table class="center">
+<tr>
+<td>
+<ul>
+<li><a class="active" href="adminhome.html">Home</a></li>
+<li><a href="addtables.html">Add Table</a></li>
+<li><a href="update.html">Update Table</a></li>
+<li><a href="delete.html">Delete Table</a></li>
+<li><a href="showstatus.jsp">Booking Status</a></li>
+<li><a href="adminlogin.html">Logout</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<br><br>
+<form name="frm" action="update.jsp" onsubmit="return valid()">
+<table>
+<tr><td>Enter Table Number :</td><td><input type="text" name="sid" id="sid" placeholder="Table Number"></td></tr>
+<tr><td colspan="2"><input type="submit" name="button" id="button" value="Search"></td></tr>
+</table>
+</form>
+</body>
+</html>

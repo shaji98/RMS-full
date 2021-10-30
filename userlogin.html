@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="userlogin.css">  
+<script type="text/javascript">
+function valid(){
+	var cid= document.frm.cid.value;
+	var password= document.frm.password.value;
+	if(cid==""){
+		alert("Enter login id");
+		return false;
+		}
+	else if(password==""){
+		alert("Enter password");
+		return false;
+		}
+}
+</script>  
+</head>
+<body>
+<h2>User Login</h2>  
+    <div class="login">    
+   <form name="frm" class="login" id="login" action="UserLogin" onsubmit="return valid()">
+        <label><b>User ID     
+        </b>  
+        <br>  
+        </label>    
+        <input type="text" name="cid" id="cid" placeholder="User ID">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="password" name="password" id="password" placeholder="Password">    
+        <br><br>    
+        <input type="submit" id="sub" value="Login">
+        <br><br> 
+    </form>     
+</div> 
+<center>
+<h2>New User Register Here..!!!</h2>
+<table>
+<tr>
+<td><img src="arrow (3).jpg" height="50" width="50"></td><td bgcolor="pink"><a href="register.html">Register</a></td><td><img src="arrow (2).jpg" height="50" width="50"></td>
+</tr>
+</table>
+</center>
+<br>
+<center><a href="index.html">GO BACK</a></center>
+</body>
+</html>

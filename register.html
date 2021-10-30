@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body  
+{   
+  background-image:
+url('bg.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;  
+    margin: 0;  
+    padding: 0;   
+    font-family: 'Arial';  
+}  
+
+.newuser{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #EE82EE;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: maroon;  
+    padding: 20px;  
+}  
+label{  
+    color: Aqua;  
+    font-size: 17px;  
+} 
+#cname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#cphn{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#cmail{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#password{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#sub{
+	width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+	
+}  
+
+</style>
+<script type="text/javascript">
+function valid(){
+	var cname= document.frm.cname.value;
+	var cphn= document.frm.cphn.value;
+	var cmail= document.frm.cmail.value;
+	var password= document.frm.password.value;
+	if(cname==""){
+		alert("Enter Your Name");
+		return false;
+		}
+	else if(cphn==""){
+		alert("Enter Your Mobile Number");
+		return false;
+		}
+	else if(cmail==""){
+		alert("Enter Your Email ID");
+		return false;
+		}
+	else if(password==""){
+		alert("Enter Password");
+		return false;
+		}
+}
+</script>
+</head>
+<body>
+
+<form name="frm" action="Regis" onsubmit="return valid()">
+<center>
+<div class="newuser">
+<h2>New User*</h2>
+ <label><b>Enter User Name     
+        </b>    
+        </label>    
+        <input type="text" name="cname" id="cname" placeholder="Your Name">    
+        <br><br>    
+        <label><b>Phone Number     
+        </b>    
+        </label>    
+        <input type="text" name="cphn" id="cphn" placeholder="Mobile number">    
+        <br><br>    
+        <label><b>Email ID     
+        </b>    
+        </label> 
+        <br>   
+        <input type="email" name="cmail" id="cmail" placeholder="Email ID">    
+        <br><br>    
+        <label><b>Password    
+        </b>    
+        </label> 
+        <br>   
+        <input type="password" name="password" id="password" placeholder="Password">    
+        <br><br>    
+        <input type="submit" id="sub" value="Submit">
+        <br><br> 
+        
+       </div>
+ </center>
+</form>
+<br>
+<center><a href="index.html">GO BACK</a></center>
+</body>
+</html>

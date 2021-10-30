@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style type="text/css">
+body  
+{   
+  background-color: pink;   
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';  
+}  
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow:hidden;
+background-color: #333;
+}
+
+li{
+float: left;
+}
+
+li a{
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+li a:hover {
+	background-color:red;
+}
+.addtables{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: Aqua;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: maroon;  
+    padding: 20px;  
+}  
+label{  
+    color: BurlyWood;  
+    font-size: 17px;  
+} 
+#size{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#cost{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#facility{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#sub{
+	width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+	
+}  
+
+</style>
+<script type="text/javascript">
+function valid(){
+	var size= document.frm.size.value;
+	var cost= document.frm.cost.value;
+	var facility= document.frm.facility.value;
+	if(size==""){
+		alert("Enter size");
+		return false;
+		}
+	else if(cost==""){
+		alert("Enter cost");
+		return false;
+		}
+	else if(facility==""){
+		alert("Enter facility");
+		return false;
+		}
+}
+
+</script>
+<body>
+<table class="center">
+<tr>
+<td>
+<ul>
+<li><a class="active" href="adminhome.html">Home</a></li>
+<li><a href="addtables.html">Add Tables</a></li>
+<li><a href="update.html">Update Tables</a></li>
+<li><a href="delete.html">Delete Tables</a></li>
+<li><a href="showstatus.jsp">Booking Status</a></li>
+<li><a href="adminlogin.html">Logout</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<form name="frm" action="AddTables" onsubmit="return valid()">
+<center>
+<div class="addtables">
+<h2>Add New Table</h2>
+ <label><b>Enter Table Size<br>(no of seats)     
+        </b>    
+        </label>    
+        <input type="text" name="size" id="size" placeholder="No of seats">    
+        <br><br>    
+        <label><b>Enter cost     
+        </b>    
+        </label>    
+        <input type="text" name="cost" id="cost" placeholder="Amount">    
+        <br><br>    
+        <label><b>Facility     
+        </b>    
+        </label> 
+        <br>   
+        <input type="text" name="facility" id="facility" placeholder="Facility">    
+        <br><br>    
+        <input type="submit" id="sub" value="Submit">
+        <br><br> 
+        
+       </div>
+ </center>
+</form>
+</body>
+</html>
